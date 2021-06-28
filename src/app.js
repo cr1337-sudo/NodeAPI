@@ -1,9 +1,14 @@
 const express = require("express");
 const morgan =require("morgan");
+//Conexion a la DB
+const conexionDB = require("./db.conexion")
 //routerEstudiantes actua como redireccionador
 //En esta variable se almacenan todos los enlaces de la seccion students 
 const routerEstudiantes = require("./routes/students.routes");
 const app = express();
+
+//Se inicia la conexion ala DB;
+conexionDB();
 
 //Settings
 app.set("name", "rest-api-nodejs");
