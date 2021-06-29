@@ -5,12 +5,17 @@ POST http://localhost:3500/api/estudiantes
 Content-Type: application/json
 
 {
-	"nombre":"Tasha",
-	"correo": "Pgonza@gmail.com"
+	"nombre":"lorencia",
+	"correo": "Pgonza@gmail.com",
+	"materias":{
+		"nombre":"Matematica",
+		"nota":10,
+		"comentario":"..."
+	}
 }
 
 ###
-PUT http://localhost:3500/api/estudiantes/60db6b9df557f3238fd654e9
+PUT http://localhost:3500/api/estudiantes/60db77b6900a0a32a44e8d76
 Content-type:application/json
 
 {
@@ -18,3 +23,29 @@ Content-type:application/json
 }
 ###
 DELETE http://localhost:3500/api/estudiantes/60db6aa2b7f98422849f7aaa
+
+//------Materias
+###
+GET http://localhost:3500/api/materias/60db922bf9f56e589232acb1
+
+###
+POST http://localhost:3500/api/materias/60db6b9df557f3238fd654e9
+Content-Type: application/json
+
+{
+	"nombre":"Inglés",
+	"notas":9,
+	"comentario":"Bien"
+}
+
+###
+DELETE http://localhost:3500/api/materias/60db6b9df557f3238fd654e9/60db86894d8639477369aa02
+
+###
+PUT http://localhost:3500/api/materias/60db922bf9f56e589232acb1/60db922bf9f56e589232acb2
+Content-Type: application/json
+
+{
+	"nota":3,
+	"comentario":"Debesun trabajo wachin"
+}

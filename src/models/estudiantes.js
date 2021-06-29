@@ -12,7 +12,14 @@ const EstudianteSchema = new Schema({
 	activo: {
 		type: Boolean,
 		default: true
-	}
+		//Cada materia es un objeto con un id nuevo
+	},materias:[
+		{
+			nota: Number,
+			nombre: String,
+			comentario: String
+		}
+	]
 });
 
 // model("Nombre del modelo como se vaa usar, ModelSchema")

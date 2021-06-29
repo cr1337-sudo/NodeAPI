@@ -5,6 +5,7 @@ const conexionDB = require("./db.conexion")
 //routerEstudiantes actua como redireccionador
 //En esta variable se almacenan todos los enlaces de la seccion students 
 const routerEstudiantes = require("./routes/students.routes");
+const routerMaterias = require("./routes/materias.routes");
 const app = express();
 
 //Se inicia la conexion ala DB;
@@ -27,9 +28,7 @@ app.use(morgan("dev"))
 //Similar a django separando el proyecto en aplicaciones
 app.use("/api/estudiantes", routerEstudiantes)
 app.use(express.static("public")) //Archivos estaticos e index.html
-
-
-
+app.use("/api/materias", routerMaterias)
 
 
 module.exports = app;

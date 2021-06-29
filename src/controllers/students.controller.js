@@ -13,10 +13,10 @@ exports.obtener = async (req, res) => {
 
 exports.agregar = async (req, res) => {
 	try {
-		const { nombre, correo } = req.body;
+		const { nombre, correo, materias } = req.body;
 		if (nombre && correo) {
 			//Al crear un nuevo estudiantes automaticamente se crea sola la BD
-			const nuevoEstudiante = new Estudiante({ nombre, correo });
+			const nuevoEstudiante = new Estudiante({ nombre, correo, materias });
 			await nuevoEstudiante.save();
 			res.json({
 				msj: "Documento insertado correctamente",
