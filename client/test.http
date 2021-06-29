@@ -1,16 +1,20 @@
-GET http://localhost:3500/
+GET http://localhost:3500/api/estudiantes
 
 ###
 POST http://localhost:3500/api/estudiantes
 Content-Type: application/json
 
 {
-	"nombre":"Ricardo",
-	"correo": "das@gmail.com"
+	"nombre":"Tasha",
+	"correo": "Pgonza@gmail.com"
 }
 
 ###
-PUT http://localhost:3500/api/estudiantes/456
-###
-DELETE http://localhost:3500/api/estudiantes/456
+PUT http://localhost:3500/api/estudiantes/60db6b9df557f3238fd654e9
+Content-type:application/json
 
+{
+	"nombre":"Joaquin"
+}
+###
+DELETE http://localhost:3500/api/estudiantes/60db6aa2b7f98422849f7aaa

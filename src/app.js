@@ -9,6 +9,7 @@ const app = express();
 
 //Se inicia la conexion ala DB;
 conexionDB();
+console.log(conexionDB())
 
 //Settings
 app.set("name", "rest-api-nodejs");
